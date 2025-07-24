@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(145deg, #0a0f1d, #071322, #0f1a2f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  color: #00f0ff;
+  overflow: hidden;
+}
+
+canvas {
+  box-shadow:
+    0 0 15px #00c8ff,
+    0 0 40px #00bfff,
+    inset 0 0 10px #005577;
+  border: 2px solid #00ffff;
+  background-color: #000a14;
+  image-rendering: pixelated;
+  z-index: 0;
+}
+
+#intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #001928, #000814 90%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  animation: pulse 3s infinite ease-in-out;
+  transition: opacity 1s ease;
+}
+
+#intro h1 {
+  font-size: 3rem;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00e0ff, 0 0 20px #00ffff;
+  margin-bottom: 20px;
+}
+
+#intro p {
+  font-size: 1.2rem;
+  color: #66f6ff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+#intro span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0%, 100% { background-color: #001f3f; }
+  50% { background-color: #001a33; }
+}
+
+#game-over-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #001020 20%, #000814 90%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  color: #00f0ff;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  transition: opacity 0.5s ease;
+}
+
+#game-over-screen h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 12px #00ffff, 0 0 20px #0088cc;
+}
+
+#game-over-screen p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+#game-over-screen button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  background-color: #00ffff20;
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  text-transform: uppercase;
+}
+
+#game-over-screen button:hover {
+  background-color: #00f0ff40;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
